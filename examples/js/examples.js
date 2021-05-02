@@ -8,7 +8,7 @@
 
     function initToolbar() {
         var toolbar = $('<div class="toolbar"></div>');
-        var btnViewSource = $('<button type="button" class="view-source"><i class="fa fa-code"></i> View source</button>');
+        var btnViewSource = $('<button type="button"  id="save"><i class="fa fa-code"></i>save</button>');
         var btnViewContent = $('<button type="button" class="view-content"><i class="fa fa-file-text-o"></i> Download</button>');
         var btnBackToList = $('<a href="./" class="view-content"><i class="fa fa-list"></i> Examples list</a>');
 
@@ -17,9 +17,28 @@
         toolbar.append(btnViewContent);
         toolbar.append(btnBackToList);
 
-        btnViewSource.on('click', function () {
-            $('#modal-source').modal('show');
+        $(function () {
+            $('#content-area').keditor();
+            $("#save").click(function(){
+                $.ajax({
+                    type: 'post',
+                    data: {action: "send-content",
+                    content: $('#content-area').keditor('getContent')
+                    },
+                    success: function(data){
+                        console.log(data);
+                    },
+                    error : function(data){
+                        console.log(data)
+                    }
+                });
+
+            });
         });
+
+        //btnViewSource.on('click', function () {
+     //       $('#modal-source').modal('show');
+     //   });
 
         btnViewContent.on('click', function () {
             var modal = $('#modal-content');
