@@ -62,7 +62,7 @@ class Script
     public static function RedirectToHome($session)
     {
         if ($session->LoggedIn()) {
-            $session->Redirect('home.php');
+            $session->Redirect('./examples/basic_with_blank_content.php');
         }
     }
 
@@ -79,7 +79,7 @@ class Script
     public static function LoginUser($session, $name, $email, $password, &$msg)
     {
         if ($session->Login($name, $email, $password)) {
-            $session->Redirect('home.php');
+            $session->Redirect('./examples/basic_with_blank_content.php');
             return true;
         } else {
             $msg = "Invalid credentials";
