@@ -28,6 +28,7 @@ CREATE TABLE `user` (
   `email` varchar(60) NOT NULL,
   `password` varchar(255) NOT NULL,
   `joining` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Content` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
