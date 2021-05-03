@@ -46,7 +46,7 @@ if (isset($_POST['btn-login'])) {
 
 <!-- Body -->
 <div class="login-form">
-    <div class="container">
+    <div class="container" style="width:40%;margin:auto;margin-top:10%; border:2px solid lightgrey; text-align:center">
      
         <!--Login form-->
         <form class="form-login" method="post" id="login-form">

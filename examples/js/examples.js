@@ -8,16 +8,18 @@
 
     function initToolbar() {
         var toolbar = $('<div class="toolbar"></div>');
-        var btnViewSource = $('<button type="button"  id="save"><i class="fa fa-code"></i>save</button>');
-        var btnViewContent = $('<button type="button" class="view-content"><i class="fa fa-file-text-o"></i> Download</button>');
-        var btnBackToList = $('<a href="./" class="view-content"><i class="fa fa-list"></i> Examples list</a>');
+        var btnViewSource = $('<button type="button"  id="save"><i class="fa fa-code"></i>save3</button>');
+        var btnViewContent = $('<button type="button" class="view-content"><i class="fa fa-file-text-o"></i> viewContent</button>');
+        var btnlogout = $('<a class="bt1 btn btn-dark my-2 my-sm-0" href="../logout.php?logout=true">Logout</a>');
 
         toolbar.appendTo(document.body);
         toolbar.append(btnViewSource);
         toolbar.append(btnViewContent);
-        toolbar.append(btnBackToList);
+        toolbar.append(btnlogout);
 
-        $(function () {
+
+        btnViewSource.on('click', function () {
+            
             $('#content-area').keditor();
             $("#save").click(function(){
                 $.ajax({
@@ -27,18 +29,16 @@
                     },
                     success: function(data){
                         console.log(data);
+                        alert("Saved");
                     },
                     error : function(data){
                         console.log(data)
                     }
-                });
+               } );
 
             });
-        });
-
-        //btnViewSource.on('click', function () {
-     //       $('#modal-source').modal('show');
-     //   });
+            
+       });
 
         btnViewContent.on('click', function () {
             var modal = $('#modal-content');

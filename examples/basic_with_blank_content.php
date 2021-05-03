@@ -31,6 +31,7 @@ $row = mysqli_fetch_assoc($query2);
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./plugins/bootstrap-3.4.1/css/bootstrap.min.css" data-type="keditor-style" />
         <link rel="stylesheet" type="text/css" href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" data-type="keditor-style" />
+       
         <!-- Start of KEditor styles -->
         <link rel="stylesheet" type="text/css" href="../dist/css/keditor.css" data-type="keditor-style" />
         <link rel="stylesheet" type="text/css" href="../dist/css/keditor-components.css" data-type="keditor-style" />
@@ -55,15 +56,28 @@ $row = mysqli_fetch_assoc($query2);
         <script type="text/javascript" src="./plugins/js-beautify-1.7.5/js/lib/beautify.js"></script>
         <script type="text/javascript" src="./plugins/js-beautify-1.7.5/js/lib/beautify-html.js"></script>
         <script type="text/javascript" src="./js/examples.js"></script>
+    <style>
+        .bt1
+        {
+            float:right;
+        }
+        .bt2
+        {
+            float:left;
+            
+        }
+    </style>
     </head>
     
     <body>
-         <!--Right side buttons-->
-         <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-info my-2 my-sm-0" href="../logout.php?logout=true">Logout</a>
-            
-        </form>
-        <button type="button" class="btn btn-outline-primary" id = "save">Save</button>
+         <!--Right side buttons
+       
+        
+        <H3 class="text-dark ">web_Builder</H3>
+        
+            <a class="bt1 btn btn-dark my-2 my-sm-0" href="../logout.php?logout=true">Logout</a>
+            <button type=" button" class="bt2 btn btn-dark" id = "save">Save</button>
+        -->
         <div data-keditor="html">
             <div id="content-area">
                 <?php 
@@ -77,7 +91,7 @@ $row = mysqli_fetch_assoc($query2);
         </div>
         
         <script type="text/javascript" data-keditor="script">
-            
+        
             $(function () {
                 $('#content-area').keditor();
                 $("#save").click(function(){

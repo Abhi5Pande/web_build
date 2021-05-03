@@ -50,7 +50,7 @@ if (isset($_POST['btn-signup'])) {
 
 <!-- Body -->
 <div class="login-form">
-    <div class="container">
+    <div class="container" style="width:40%;margin:auto;margin-top:10%; border:2px solid lightgrey; text-align:center">
         
 
         <!--Registration form-->
