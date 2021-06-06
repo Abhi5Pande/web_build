@@ -92,6 +92,7 @@ $row = mysqli_fetch_assoc($query2);
         
             $(function () {
                 $('#content-area').keditor();
+                $("a[title='Preview OFF']").parent().addClass("keditor-topbar-right");
                 $("#save").click(function(){
                     $.ajax({
                         type: 'post',
