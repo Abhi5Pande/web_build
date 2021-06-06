@@ -27,7 +27,7 @@ $row = mysqli_fetch_assoc($query2);
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>KEditor - Kademi Content Editor</title>
+        <title>Web Builder</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./plugins/bootstrap-3.4.1/css/bootstrap.min.css" data-type="keditor-style" />
         <link rel="stylesheet" type="text/css" href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" data-type="keditor-style" />
@@ -56,17 +56,11 @@ $row = mysqli_fetch_assoc($query2);
         <script type="text/javascript" src="./plugins/js-beautify-1.7.5/js/lib/beautify.js"></script>
         <script type="text/javascript" src="./plugins/js-beautify-1.7.5/js/lib/beautify-html.js"></script>
         <script type="text/javascript" src="./js/examples.js"></script>
-    <style>
-        .bt1
-        {
-            float:right;
-        }
-        .bt2
-        {
-            float:left;
-            
-        }
-    </style>
+        <style>
+            a[title="Save"], a[title="View on mobile"], a[title="View on tablet"], a[title="View on laptop"], a[title="View on desktop"]{
+                display: none;
+            }
+        </style>
     </head>
     
     <body>
@@ -102,6 +96,7 @@ $row = mysqli_fetch_assoc($query2);
                         },
                         success: function(data){
                             console.log(data);
+                            alert("Saved");
                         },
                         error : function(data){
                             console.log(data)
@@ -109,7 +104,7 @@ $row = mysqli_fetch_assoc($query2);
                     });
 
                 });
-            });
+             });
         </script>
     </body>
 </html>
