@@ -89,7 +89,11 @@ $row = mysqli_fetch_assoc($query2);
             </div>
             
         </div>
-        
+        <style>
+            a[title="Save"], a[title="View on mobile"], a[title="View on tablet"], a[title="View on laptop"], a[title="View on desktop"]{
+                display: none;
+            }
+        </style>
         <script type="text/javascript" data-keditor="script">
         
             $(function () {
