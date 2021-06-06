@@ -8,7 +8,7 @@
 
     function initToolbar() {
         var toolbar = $('<div class="toolbar"></div>');
-        var btnViewSource = $('<button type="button"  id="save"><i class="fa fa-code"></i>save3</button>');
+        var btnViewSource = $('<button type="button"  id="save">save</button>');
         var btnViewContent = $('<button type="button" class="view-content"><i class="fa fa-file-text-o"></i> viewContent</button>');
         var btnlogout = $('<a class="bt1 btn btn-dark my-2 my-sm-0" href="../logout.php?logout=true">Logout</a>');
 
@@ -18,27 +18,27 @@
         toolbar.append(btnlogout);
 
 
-        btnViewSource.on('click', function () {
+    //     btnViewSource.on('click', function () {
             
-            $('#content-area').keditor();
-            $("#save").click(function(){
-                $.ajax({
-                    type: 'post',
-                    data: {action: "send-content",
-                    content: $('#content-area').keditor('getContent')
-                    },
-                    success: function(data){
-                        console.log(data);
-                        alert("Saved");
-                    },
-                    error : function(data){
-                        console.log(data)
-                    }
-               } );
+    //         $('#content-area').keditor();
+    //         $("#save").click(function(){
+    //             $.ajax({
+    //                 type: 'post',
+    //                 data: {action: "send-content",
+    //                 content: $('#content-area').keditor('getContent')
+    //                 },
+    //                 success: function(data){
+    //                     console.log(data);
+    //                     alert("Saved");
+    //                 },
+    //                 error : function(data){
+    //                     console.log(data)
+    //                 }
+    //            } );
 
-            });
+    //         });
             
-       });
+    //    });
 
         btnViewContent.on('click', function () {
             var modal = $('#modal-content');
